@@ -36,6 +36,7 @@ Route::get('/slider', [sliderController::class,'slider'])->name('slider')->middl
 
 Route::get('/category', [categoryController::class,'category'])->name('category')->middleware('isLoggedIn');
 Route::get('/addCategory', [addCategoryController::class,'addcategory'])->name('addCategory')->middleware('isLoggedIn');
+Route::post('/add-category', [addCategoryController::class,'addingcategory'])->name('add-category')->middleware('isLoggedIn');
 Route::get('/updatecategory', [updateCategoryController::class,'updatecategory'])->name('updatecategory')->middleware('isLoggedIn');
 
 Route::get('/subCategory', [subCategoryController::class,'subCategory'])->name('subCategory')->middleware('isLoggedIn');
