@@ -13,11 +13,11 @@
           <div class="row mb-4 align-items-center">
             <div class="col col-6">
               <div class="ap-com sm-com-heading">
-                <h3>Add Category</h3>
+                <h3>Add Sub Category</h3>
               </div>
             </div>
             <div class="col col-6" style="margin-top: 25px:">
-              <div class="text-end"> <a href="{{route('category')}}" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="arrow" style="margin-right:15px; "/> Back </a> </div>
+              <div class="text-end"> <a href="{{route('subCategory')}}" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="arrow" style="margin-right:15px; "/> Back </a> </div>
             </div>
           </div>
           <form action="add-category" method="post" enctype="multipart/form-data">

@@ -12,12 +12,12 @@
         <div class="row mb-4 align-items-center">
           <div class="col col-6">
             <div class="ap-com sm-com-heading" style="margin-top:50px;">
-               <h3>Category List</h3>
+               <h3>Sub Category List</h3>
             </div>
           </div>
           <div class="col col-6">
             <div class="text-end">
-              <a href="{{route('addCategory')}}" class="grad-btn grad-btn-color" style="">Add Category <img src="images/btn-arrow-color.svg" alt="arrow"/></a>
+              <a href="{{route('addsubCategory')}}" class="grad-btn grad-btn-color" style="">Add Category <img src="images/btn-arrow-color.svg" alt="arrow"/></a>
             </div>
           </div>
         </div>

@@ -13,7 +13,8 @@
           <h3 style="margin-top: 50px;">Home / Landing Page</h3>
         </div>
         <div class="ap-com">
-          <form action="" method="" enctype="multipart/form-data">
+          <form action="add-slider" method="post" >
+            @csrf
             <div class="row">
               <div class="col col-xxl-12 col-md-8 col-12">
                 <div class="tab-content ap-com" id="nav-tabContent"> 
@@ -27,37 +28,35 @@
                         </div>
                         <div class="col col-12">
                           <div class="mb-4 form-group">
-                            <label class="form-label">Tiltle</label>
-                            <textarea class="form-control">Resturant</textarea>
+                            <label class="form-label">Title</label>
+                            <input type="text" class="form-control" name="Title" value="{{old('Title')}}" placeholder="Write a attrctive title"/>
+                            <span class="text-danger">@error('Title') {{$message}} @enderror</span>
                           </div>
                         </div>
                         <div class="col col-12">
                           <div class="mb-4 form-group">
                             <label class="form-label">Subtitle</label>
-                            <input type="text" class="form-control" name="" value="If music be the food of love play on" />
+                            <input type="text" class="form-control" name="Subtitle" value="{{old('Subtitle')}}" placeholder="If music be the food of love play on"/>
+                            <span class="text-danger">@error('Subtitle') {{$message}} @enderror</span>
                           </div>
                         </div>
                         <div class="col col-12">
                           <div class="mb-4 form-group">
                             <label class="form-label">Description</label>
-                            <textarea class="form-control">Food, in the end, in our own tradition, is something holy. It's not about nutrients and calories.
-                            </textarea>
+                            <textarea type="text" class="form-control" name="Description" value="{{old('Description')}}" placeholder="If music be the food of love play on"></textarea>
+                            <span class="text-danger">@error('Description') {{$message}} @enderror</span>
                           </div>
                         </div>
-
                         <div class="col col-12">
                               <div class="mb-4 form-group">
                                 <label class="form-label">Slide Images/ Videos</label>
-                                    
-                                  <input id="sect2RightSLide" type="file" multiple>
-                                    
+                                  <input id="sect2RightSLide" name="sliderImg" type="file" multiple>
+                                  <span class="text-danger">@error('sliderImg') {{$message}} @enderror</span>
                               </div>
                         </div>                                                
                       </div>
                     </div>
                   </div>
-                  
-
                 </div>
                 <div class="col col-12 mt-5">
                   <div class="text-center submit-div">

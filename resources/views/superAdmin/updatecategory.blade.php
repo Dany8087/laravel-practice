@@ -43,9 +43,7 @@
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Blog Images and Author Photo</label>
-                  <div class="file-loading">
                     <input type="file" class="inputphoto" multiple>
-                  </div>
                 </div>
               </div>
               <div class="col col-12">
@@ -54,7 +52,6 @@
                   <textarea class="form-control editor-ctrl" id="ctrl-editor"></textarea>
                 </div>
               </div>
-              
             </div>
             <div class="row mb-4">
               <div class="col col-12 mb-3">

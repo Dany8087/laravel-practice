@@ -9,6 +9,7 @@ use App\Http\Controllers\addCategoryController;
 use App\Http\Controllers\addBlogController;
 use App\Http\Controllers\updateSubCategoryController;
 use App\Http\Controllers\updateCategoryController;
+use App\Http\Controllers\AddsubCategorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,9 @@ Route::post('login-user',[Auth::class,'loginUser'])->name('login-user');
 Route::get('/dashboard', [Auth::class,'dashboard'])->name('dashboard')->middleware('isLoggedIn');
 
 Route::get('/slider', [sliderController::class,'slider'])->name('slider')->middleware('isLoggedIn');
+Route::post('/add-slider', [sliderController::class,'addslider'])->name('add-slider')->middleware('isLoggedIn');
+
+
 
 Route::get('/category', [categoryController::class,'category'])->name('category')->middleware('isLoggedIn');
 Route::get('/addCategory', [addCategoryController::class,'addcategory'])->name('addCategory')->middleware('isLoggedIn');
@@ -40,6 +44,7 @@ Route::post('/add-category', [addCategoryController::class,'addingcategory'])->n
 Route::get('/updatecategory', [updateCategoryController::class,'updatecategory'])->name('updatecategory')->middleware('isLoggedIn');
 
 Route::get('/subCategory', [subCategoryController::class,'subCategory'])->name('subCategory')->middleware('isLoggedIn');
+Route::get('/addsubCategory', [AddsubCategorController::class,'addsubcategory'])->name('addsubCategory')->middleware('isLoggedIn');
 Route::get('/updatesubcategory', [updateSubCategoryController::class,'updatesubcategory'])->name('updatesubcategory')->middleware('isLoggedIn');
 
 Route::get('/logout',[Auth::class,'logout'])->name('logout');
