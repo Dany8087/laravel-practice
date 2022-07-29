@@ -40,8 +40,8 @@ class Auth extends Controller
         $request->validate([
         'email'=>'required|email',
         'password'=>'required|min:6|max:12'
-    ]);
-    $user = User::where('email', '=',$request->email)->first();
+        ]);
+        $user = User::where('email', '=',$request->email)->first();
         if($user){
             if(Hash::check($request->password, $user->password)) {
                 $request->session()->put('loginId', $user->id);
@@ -56,12 +56,11 @@ class Auth extends Controller
     }
 
     public function dashboard(){
-        $data = array();
+        $data = User::all();
         if(Session::has('loginId')){
             $data = User::where('id', '=',Session::get('loginId'))->first();
-            // Session::put('username', $data->username);
         }
-        return view('superAdmin/dashboard');
+            return view('superAdmin/dashboard',['users'=>$data]);
     }
 
     public function logout(){

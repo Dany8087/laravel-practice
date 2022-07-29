@@ -38,12 +38,13 @@
                     </tr>
                   </thead>
                   <tbody>
+                  @foreach ($categories as $items)
                   <tr>
-                      <td>1</td>
-                      <td class="text-center"><img src="images/blog_preview_img.png" alt="" class="td_blog_img" /></td>
-                      <td>Category Title 1</td>
-                      <td>Category Subtitle 1</td>
-                      <td>Category Description 1</td>
+                      <td>{{$items['id']}}</td>
+                      <td class="text-center"><img src="(asset('$items->categoryImg))" alt="" class="td_blog_img" /></td>
+                      <td>{{$items['CategoryTitle']}}</td>
+                      <td>{{$items['CategorySubtitle']}}</td>
+                      <td>{{$items['CategoryDescription']}}</td>
                       <td>
                           <div class="dropdown action-div">
                             <div class="dropdown-toggle no-toggle-arrow" data-bs-toggle="dropdown" aria-expanded="false">
@@ -57,26 +58,7 @@
                           </div>
                       </td>
                     </tr>
-                    <tr>
-                      <td>2</td>
-                      <td class="text-center"><img src="images/7_Preview_img.png" alt="" class="td_blog_img" /></td>
-                      <td>Category Title 2</td>
-                      <td>Category Subtitle 2</td>
-                      <td>Category Description 2</td>
-                      <td>
-                          <div class="dropdown action-div">
-                            <div class="dropdown-toggle no-toggle-arrow" data-bs-toggle="dropdown" aria-expanded="false">
-                              <i class="fas fa-ellipsis-v"></i>
-                            </div>
-                            <!--//dropdown-toggle-->
-                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="updatecategory"><i class="fas fa-pencil-alt"></i> Edit</a></li>
-                              <li><a class="dropdown-item" href="#"><i class="fas fa-trash-alt"></i> Delete</a></li>
-                            </ul>
-                          </div>
-                      </td>
-                    </tr>
-                    
+                    @endforeach
                   </tbody>
                 </table>
               </div>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\subCategory;
 
 class AddsubCategorController extends Controller
 {
@@ -21,7 +22,7 @@ class AddsubCategorController extends Controller
         ]);
         $image = $request->file('subcategoryImg')->store('public/subcategoryImgfolder');
     
-        $sub_categories = new Category();
+        $sub_categories = new subCategory();
         $sub_categories->subCategoryTitle = $request->subCategoryTitle;
         $sub_categories->subCategorySubtitle = $request->subCategorySubtitle;
         $sub_categories->subCategoryDescription = $request->subCategoryDescription;

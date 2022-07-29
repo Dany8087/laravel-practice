@@ -20,7 +20,7 @@
               <div class="text-end"> <a href="{{route('subCategory')}}" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="arrow" style="margin-right:15px; "/> Back </a> </div>
             </div>
           </div>
-          <form action="add-subcategory" method="post" enctype="multipart/form-data">
+          <form action="add-subCategory" method="post" enctype="multipart/form-data">
           @if(Session::has('success'))
           <div class="alert alert-success">{{Session::get('success')}}</div>
           @endif
@@ -32,21 +32,21 @@
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Title</label>
-                  <input type="text" class="form-control" name="subCategoryTitle" value="{{old('CategoryTitle')}}" placeholder="Enter title" />
+                  <input type="text" class="form-control" name="subCategoryTitle" value="{{old('subCategoryTitle')}}" placeholder="Enter title" />
                   <span class="text-danger">@error('subCategoryTitle') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Subtitle</label>
-                  <input type="text" class="form-control" name="subCategorySubtitle" value="{{old('CategorySubtitle')}}" placeholder="Enter subtitle" />
+                  <input type="text" class="form-control" name="subCategorySubtitle" value="{{old('subCategorySubtitle')}}" placeholder="Enter subtitle" />
                   <span class="text-danger">@error('subCategorySubtitle') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Description</label>
-                  <input type="text" class="form-control" name="subCategoryDescription" value="{{old('CategoryDescription')}}" placeholder="Enter description" />
+                  <input type="text" class="form-control" name="subCategoryDescription" value="{{old('subCategoryDescription')}}" placeholder="Enter description" />
                   <span class="text-danger">@error('subCategoryDescription') {{$message}} @enderror</span>
                 </div>
               </div>
@@ -60,7 +60,7 @@
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Blog Details</label>
-                  <textarea class="form-control editor-ctrl" id="ctrl-editor"></textarea>
+                  <textarea class="form-control editor-ctrl" id="ctrl-editor" type="text" name="blogDetails"></textarea>
                 </div>
               </div>
             </div>

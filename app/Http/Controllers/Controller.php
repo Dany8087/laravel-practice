@@ -10,4 +10,13 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    public static function getUrl($image)
+{
+    $url = "";
+    if( !empty($image) && Storage::disk('public')->exists($image) )
+        $url = Storage::url($image);
+    return $url;
+}
+
 }

@@ -4,12 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\sliderController;
 use App\Http\Controllers\categoryController;
-use App\Http\Controllers\subCategoryController;
 use App\Http\Controllers\addCategoryController;
-use App\Http\Controllers\addBlogController;
-use App\Http\Controllers\updateSubCategoryController;
 use App\Http\Controllers\updateCategoryController;
+use App\Http\Controllers\subCategoryController;
 use App\Http\Controllers\AddsubCategorController;
+use App\Http\Controllers\updateSubCategoryController;
+use App\Http\Controllers\addBlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +22,10 @@ use App\Http\Controllers\AddsubCategorController;
 |
 */
 
-Route::get('/', function () {
-    return view('auth/login');
-});
+Route::get('/', function () { return view('auth/login');})->middleware('alreadyLoggedIn');
 
 Route::get('/login',[Auth::class,'login'])->middleware('alreadyLoggedIn');
-Route::get('/registration',[Auth::class,'registration'])->name('registration')->middleware('alreadyLoggedIn');
+Route::get('/registration',[Auth::class,'registration'])->middleware('alreadyLoggedIn');
 Route::post('/register-user',[Auth::class,'registerUser'])->name('register-user');
 Route::post('login-user',[Auth::class,'loginUser'])->name('login-user');
 
@@ -44,7 +42,10 @@ Route::post('/add-category', [addCategoryController::class,'addingcategory'])->n
 Route::get('/updatecategory', [updateCategoryController::class,'updatecategory'])->name('updatecategory')->middleware('isLoggedIn');
 
 Route::get('/subCategory', [subCategoryController::class,'subCategory'])->name('subCategory')->middleware('isLoggedIn');
-Route::get('/add-subCategory', [AddsubCategorController::class,'addingsubcategory'])->name('add-subCategory')->middleware('isLoggedIn');
-Route::get('/updatesubcategory', [updateSubCategoryController::class,'updatesubcategory'])->name('updatesubcategory')->middleware('isLoggedIn');
+Route::get('/addsubCategory', [AddsubCategorController::class,'addsubcategory'])->name('addsubCategory')->middleware('isLoggedIn');
+Route::post('/add-subCategory', [AddsubCategorController::class,'addingsubcategory'])->name('add-subCategory')->middleware('isLoggedIn');
+Route::get('/updatesubcategory/{$id}', [updateSubCategoryController::class,'updatesubcategory'])->name('updatesubcategory')->middleware('isLoggedIn');
+
+Route::post('/deletesc/{$id}',[subCategoryController::class,'deletesc'])->name('deletesc');
 
 Route::get('/logout',[Auth::class,'logout'])->name('logout');
