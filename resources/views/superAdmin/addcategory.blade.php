@@ -72,25 +72,25 @@
               <div class="col col-md-6 col-12 mb-3">
                 <div class="form-group">
                   <label class="form-label">Facebook</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Facebook" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12 mb-3">
                 <div class="form-group">
                   <label class="form-label">Twitter</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Twitter" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="form-group">
                   <label class="form-label">Instagram</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Instagram" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="form-group">
                   <label class="form-label">Linkedin</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Linkedin" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-12 mt-5">

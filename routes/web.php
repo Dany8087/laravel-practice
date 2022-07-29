@@ -34,7 +34,7 @@ Route::post('login-user',[Auth::class,'loginUser'])->name('login-user');
 Route::get('/dashboard', [Auth::class,'dashboard'])->name('dashboard')->middleware('isLoggedIn');
 
 Route::get('/slider', [sliderController::class,'slider'])->name('slider')->middleware('isLoggedIn');
-Route::post('/add-slider', [sliderController::class,'addslider'])->name('add-slider')->middleware('isLoggedIn');
+Route::post('/add-slider', [sliderController::class,'addSlider'])->name('add-slider')->middleware('isLoggedIn');
 
 
 

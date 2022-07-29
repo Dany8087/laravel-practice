@@ -11,13 +11,14 @@ class sliderController extends Controller
         return view('superAdmin/slider');
     }
 
-    public function addslider(Request $request){
+    public function addSlider(Request $request){
         $request->validate([
             'Title'=>'required',
             'Subtitle'=>'required',
             'Description'=>'required',
             'sliderImg'=>'required|max:5048'
         ]);
+        // dd($request->all());
 
         $image = $request->file('sliderImg')->store('public/sliderImgfolder');
 
@@ -27,6 +28,13 @@ class sliderController extends Controller
         $sliders->Description = $request->Description;
         $sliders->sliderImg = $image;
         $res = $sliders->save();
-       echo ('successful!!!');
+    //    echo ('successful!!!');
+
+    if($res){
+        return back()->with('success','Category added successfully');
+    }else{
+        return back()->with('fail', 'Something wrong');
+    }
+    
     }
 }
