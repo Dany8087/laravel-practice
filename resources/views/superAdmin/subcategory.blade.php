@@ -53,7 +53,7 @@
                             <!--//dropdown-toggle-->
                             <ul class="dropdown-menu">
                               <li><a class="dropdown-item" href="updatecategory/{{$items['id']}}"><i class="fas fa-pencil-alt"></i> Edit</a></li>
-                              <li><a class="dropdown-item" href="deletesc"><i class="fas fa-trash-alt"></i> Delete</a></li>
+                              <li><a class="dropdown-item" href={{"deletesc/".$items['id']}}><i class="fas fa-trash-alt"></i> Delete</a></li>
                             </ul>
                           </div>
                       </td>

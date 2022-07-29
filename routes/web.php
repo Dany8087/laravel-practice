@@ -46,6 +46,6 @@ Route::get('/addsubCategory', [AddsubCategorController::class,'addsubcategory'])
 Route::post('/add-subCategory', [AddsubCategorController::class,'addingsubcategory'])->name('add-subCategory')->middleware('isLoggedIn');
 Route::get('/updatesubcategory/{$id}', [updateSubCategoryController::class,'updatesubcategory'])->name('updatesubcategory')->middleware('isLoggedIn');
 
-Route::post('/deletesc/{$id}',[subCategoryController::class,'deletesc'])->name('deletesc');
+Route::get('/deletesc/{$id}',[subCategoryController::class,'deletesc'])->name('deletesc');
 
 Route::get('/logout',[Auth::class,'logout'])->name('logout');

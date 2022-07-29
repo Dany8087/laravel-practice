@@ -12,7 +12,7 @@ class subCategoryController extends Controller
         return view('superAdmin/subcategory',['sub_categories'=>$sub_categoriesdata]);
     }
 
-    public function deletesc(){
+    public function deletesc($id){
         $sub_categoriesdata=subCategory::find($id);
         dd($sub_categoriesdata);
         $sub_categoriesdata->delete();
