@@ -59,8 +59,9 @@ class Auth extends Controller
         $data = array();
         if(Session::has('loginId')){
             $data = User::where('id', '=',Session::get('loginId'))->first();
+            // Session::put('username', $data->username);
         }
-        return view('superAdmin/dashboard', compact('data'));
+        return view('superAdmin/dashboard');
     }
 
     public function logout(){

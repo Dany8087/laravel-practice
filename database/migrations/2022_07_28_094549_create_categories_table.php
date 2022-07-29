@@ -19,6 +19,11 @@ return new class extends Migration
             $table->string('CategorySubtitle');
             $table->string('CategoryDescription');
             $table->string('categoryImg');
+            $table->string('blogDetails');
+            $table->string('Facebook');
+            $table->string('Twitter');
+            $table->string('Instagram');
+            $table->string('Linkedin');
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@
         <div class="container">
           <div class="row mb-4 align-items-center">
             <div class="col col-6">
-              <div class="ap-com sm-com-heading">
+              <div class="ap-com sm-com-heading" style="margin-top:50px;">
                 <h3>Add Category</h3>
               </div>
             </div>
@@ -60,7 +60,7 @@
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Blog Details</label>
-                  <textarea class="form-control editor-ctrl" id="ctrl-editor"></textarea>
+                  <textarea class="form-control editor-ctrl" id="ctrl-editor" type="text" name="blogDetails"></textarea>
                 </div>
               </div>
             </div>

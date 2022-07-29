@@ -17,7 +17,8 @@ class addCategoryController extends Controller
         'CategoryTitle'=>'required',
         'CategorySubtitle'=>'required',
         'CategoryDescription'=>'required',
-        'categoryImg'=>'required|mimes:jpg,png,jpeg|max:5048'
+        'categoryImg'=>'required|mimes:jpg,png,jpeg|max:5048',
+        'blogDetails'=>'max:100'
     ]);
     $image = $request->file('categoryImg')->store('public/categoryImgfolder');
 
@@ -26,6 +27,12 @@ class addCategoryController extends Controller
     $categories->CategorySubtitle = $request->CategorySubtitle;
     $categories->CategoryDescription = $request->CategoryDescription;
     $categories->categoryImg = $image;
+    $categories->blogDetails = $request->blogDetails;
+    $categories->Facebook = $request->Facebook;
+    $categories->Twitter = $request->Twitter;
+    $categories->Instagram = $request->Instagram;
+    $categories->Linkedin = $request->Linkedin;
+
     $res = $categories->save();
     
     if($res){

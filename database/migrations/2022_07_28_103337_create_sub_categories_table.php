@@ -15,6 +15,15 @@ return new class extends Migration
     {
         Schema::create('sub_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('subCategoryTitle');
+            $table->string('subCategorySubtitle');
+            $table->string('subCategoryDescription');
+            $table->string('subcategoryImg');
+            $table->string('blogDetails');
+            $table->string('Facebook');
+            $table->string('Twitter');
+            $table->string('Instagram');
+            $table->string('Linkedin');
             $table->timestamps();
         });
     }

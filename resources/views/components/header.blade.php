@@ -1,6 +1,6 @@
 <header>
     <div class="header-left">
-        <h2>Hi, <span>username</span></h2>
+        <h2>Hi, <span>{{Session::get('username')}}</span></h2>
         <ul>
           <li>Home <i class="fas fa-angle-right"></i></li>
           <li><a class="active">Dashboard</a></li>

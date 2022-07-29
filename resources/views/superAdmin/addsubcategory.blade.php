@@ -12,7 +12,7 @@
         <div class="container">
           <div class="row mb-4 align-items-center">
             <div class="col col-6">
-              <div class="ap-com sm-com-heading">
+              <div class="ap-com sm-com-heading" style="margin-top:50px;">
                 <h3>Add Sub Category</h3>
               </div>
             </div>
@@ -20,7 +20,7 @@
               <div class="text-end"> <a href="{{route('subCategory')}}" class="grad-btn grad-btn-color"><img src="images/left-arrow-color.svg" alt="arrow" style="margin-right:15px; "/> Back </a> </div>
             </div>
           </div>
-          <form action="add-category" method="post" enctype="multipart/form-data">
+          <form action="add-subcategory" method="post" enctype="multipart/form-data">
           @if(Session::has('success'))
           <div class="alert alert-success">{{Session::get('success')}}</div>
           @endif
@@ -32,29 +32,29 @@
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Title</label>
-                  <input type="text" class="form-control" name="CategoryTitle" value="{{old('CategoryTitle')}}" placeholder="Enter title" />
-                  <span class="text-danger">@error('CategoryTitle') {{$message}} @enderror</span>
+                  <input type="text" class="form-control" name="subCategoryTitle" value="{{old('CategoryTitle')}}" placeholder="Enter title" />
+                  <span class="text-danger">@error('subCategoryTitle') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Subtitle</label>
-                  <input type="text" class="form-control" name="CategorySubtitle" value="{{old('CategorySubtitle')}}" placeholder="Enter subtitle" />
-                  <span class="text-danger">@error('CategorySubtitle') {{$message}} @enderror</span>
+                  <input type="text" class="form-control" name="subCategorySubtitle" value="{{old('CategorySubtitle')}}" placeholder="Enter subtitle" />
+                  <span class="text-danger">@error('subCategorySubtitle') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Description</label>
-                  <input type="text" class="form-control" name="CategoryDescription" value="{{old('CategoryDescription')}}" placeholder="Enter description" />
-                  <span class="text-danger">@error('CategoryDescription') {{$message}} @enderror</span>
+                  <input type="text" class="form-control" name="subCategoryDescription" value="{{old('CategoryDescription')}}" placeholder="Enter description" />
+                  <span class="text-danger">@error('subCategoryDescription') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-12">
                 <div class="mb-4 form-group">
                   <label class="form-label">Category Images </label>
-                    <input type="file" name="categoryImg" class="inputphoto" multiple>
-                    <span class="text-danger">@error('categoryImg') {{$message}} @enderror</span>
+                    <input type="file" name="subcategoryImg" class="inputphoto" multiple>
+                    <span class="text-danger">@error('subcategoryImg') {{$message}} @enderror</span>
                 </div>
               </div>
               <div class="col col-12">
@@ -72,25 +72,25 @@
               <div class="col col-md-6 col-12 mb-3">
                 <div class="form-group">
                   <label class="form-label">Facebook</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Facebook" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12 mb-3">
                 <div class="form-group">
                   <label class="form-label">Twitter</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Twitter" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="form-group">
                   <label class="form-label">Instagram</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Instagram" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-md-6 col-12">
                 <div class="form-group">
                   <label class="form-label">Linkedin</label>
-                  <input type="text" class="form-control" name="" value="" placeholder="Enter social media link" />
+                  <input type="text" class="form-control" name="Linkedin" value="" placeholder="Enter social media link" />
                 </div>
               </div>
               <div class="col col-12 mt-5">
